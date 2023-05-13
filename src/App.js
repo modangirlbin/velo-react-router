@@ -1,6 +1,7 @@
 import {Routes, Route, Link} from 'react-router-dom';
 import Home from './Home';
 import About from './About';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/profiles/:username" element={<Profile />} /> 
+        {/* <Route path="/profiles/:username/:id" element={<Profile />} />  */}
+        {/* : 이후의 부분이 url 파라미터 */}
       </Routes>
     </div>
   );
