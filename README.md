@@ -1,5 +1,4 @@
-https://github.com/modangirlbin/velo-react-router   
-C:\local_home\study-exercise\react\fastcampus-velopert\router
+https://github.com/modangirlbin/velo-react-router
 
 ## 5장 - Router
 5.0 소개
