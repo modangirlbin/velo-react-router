@@ -14,7 +14,30 @@ https://github.com/modangirlbin/velo-react-router
   - <Link>: 사용한 Router의 주소를 바꿈 a태그지만 새로고침 안됨
 5.1 프로젝트 준비 및 Router 기본사용법: BrowserRouter, Routes, Route, Link   
     v6) component={About} -> element={<Profile />}
-5.2 파라미터와 쿼리: url 파라미터, 쿼리에 따른 컴포넌트 렌더링
-  - 파라미터 받아올땐 usePrams
-  - 쿼리받아올땐 useLocation : qs설치 $ yarn add qs   
-  v6) {match} -> usePrams, {location} -> useLocation
+5.2 파라미터와 쿼리: url 파라미터, 쿼리에 따른 컴포넌트 렌더링   
+  v6) {match} -> usePrams, {location} -> useLocation   
+  1. 파라미터 받아올땐 usePrams
+    react-router-dom설치
+      ```js
+      npm install react-router-dom
+      ```
+      라우팅을 구현할 페이지에 디테일 페이지의 path에 :파라미터 값을 넣어준다
+      ```js
+      <Route path="/detail/:id" element={<Detail />} />
+      ```
+      useParams이용해 파라미터를 가져오고 데이터 값을 이용해 디테일 페이지에서 활용
+      ```js
+      import { useParams } from 'react-router-dom';
+
+      const {username} = useParams();
+      const data = Data[username]
+      ```
+
+  2. 쿼리받아올땐 useSearchParams
+    ```js
+    import { useSearchParams } from 'react-router-dom';
+
+    const [searchParams] = useSearchParams();
+    const detail = searchParams.get('detail');
+    ```
+    

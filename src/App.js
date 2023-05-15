@@ -15,8 +15,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profiles/:username" element={<Profile />} /> 
-        {/* <Route path="/profiles/:username/:id" element={<Profile />} />  */}
         {/* : 이후의 부분이 url 파라미터 */}
+        {/* <Route path="/profiles/:username/:id" element={<Profile />} />  */}
       </Routes>
     </div>
   );
